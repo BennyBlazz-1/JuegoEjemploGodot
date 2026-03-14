@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://drfsw8swfxxkj"]
+[gd_scene format=3 uid="uid://drfsw8swfxxkj"]
 
 [ext_resource type="Texture2D" uid="uid://wkis6ji0yxvh" path="res://art/tilesets/plains.png" id="1_4wyf3"]
 [ext_resource type="Script" uid="uid://dccoqb1khkpah" path="res://scripts/world.gd" id="1_qfnet"]
@@ -79,11 +79,11 @@ sources/2 = SubResource("TileSetAtlasSource_4mrxx")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i7141"]
 size = Vector2(48, 28)
 
-[node name="world" type="Node2D"]
+[node name="world" type="Node2D" unique_id=2075648739]
 y_sort_enabled = true
 script = ExtResource("1_qfnet")
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="TileMap" type="TileMap" parent="." unique_id=1913096812]
 y_sort_enabled = true
 tile_set = SubResource("TileSet_7r4gi")
 format = 2
@@ -95,20 +95,20 @@ layer_2/name = "ysort"
 layer_2/y_sort_enabled = true
 layer_2/tile_data = PackedInt32Array(2, 655362, 7, 262150, 655362, 7, 262163, 655362, 7, 24, 655362, 7, 655368, 655362, 7, 9, 2, 5, 262161, 2, 5, 589825, 2, 5, 589829, 524290, 6, 131077, 524290, 6, 6, 524290, 6, 655376, 524290, 6, 524311, 524290, 6, 131094, 524290, 6, 19, 393218, 7, 589836, 393218, 7, 655381, 393218, 7, 65549, 524290, 6, 196633, 2, 1, 65559, 2, 1, 196616, 2, 1, 720900, 2, 1, 720915, 2, 1, 131083, 327682, 0, 196620, 2, 0, 655371, 327682, 0)
 
-[node name="player" parent="." instance=ExtResource("4_k0juu")]
-position = Vector2(131, 117)
+[node name="player" parent="." unique_id=1610184498 instance=ExtResource("4_k0juu")]
+position = Vector2(131, 128)
 
-[node name="enemy" parent="." instance=ExtResource("4_71j4m")]
+[node name="enemy" parent="." unique_id=665215506 instance=ExtResource("4_71j4m")]
 position = Vector2(258, 115)
 
-[node name="collisions" type="StaticBody2D" parent="."]
+[node name="collisions" type="StaticBody2D" parent="." unique_id=405125461]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collisions"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collisions" unique_id=713119647]
 polygon = PackedVector2Array(3, -1, 174, 0, 174, -29, 224, -29, 224, 0, 259, 0, 259, 28, 263, 30, 289, 30, 291, 33, 292, 46, 415, 46, 415, 190, -2, 192, 1, -4, -34, 21, -44, 100, -49, 152, -50, 192, -17, 225, 149, 250, 238, 261, 348, 268, 432, 266, 472, 232, 484, 167, 485, 89, 485, 21, 461, -49, 389, -96, 244, -112, 180, -84, 43, -48, 3, -5)
 
-[node name="cliffside_transition_point" type="Area2D" parent="."]
+[node name="cliffside_transition_point" type="Area2D" parent="." unique_id=1668352985]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cliffside_transition_point"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cliffside_transition_point" unique_id=1062210608]
 position = Vector2(199, -14)
 shape = SubResource("RectangleShape2D_i7141")
 
